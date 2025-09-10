@@ -56,3 +56,27 @@ h1.major:after { background-color: var(--accent) !important; }
 @media (max-width: 736px) {
   #intro { background-position: 50% 30%; }
 }
+
+/* Frosted glass panel under hero text */
+#intro .hero-glass{
+  background: rgba(17, 24, 39, 0.85);                 /* translucent */
+  -webkit-backdrop-filter: blur(10px) saturate(120%);  /* Safari */
+  backdrop-filter: blur(10px) saturate(120%);          /* Chrome/Edge/Firefox */
+  border: 1px solid rgba(255,255,255,0.25);
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+  padding: clamp(1rem, 2.5vw, 2rem);
+  max-width: 820px;                                    /* keeps it readable */
+}
+
+/* Tighter spacing inside the panel */
+#intro .hero-glass h1 { margin-bottom: 0.6rem; }
+#intro .hero-glass p  { margin-bottom: 1.1rem; }
+
+/* Mobile: give it side breathing room */
+@media (max-width: 736px){
+  #intro .hero-glass{ margin: 0 1rem; }
+}
+
+/* Optional: since we now have a panel, lighten the global hero overlay a bit */
+#intro:before{ background-color: rgba(0,0,0,0.30); }
