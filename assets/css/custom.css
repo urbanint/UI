@@ -1,0 +1,58 @@
+/* ===== Theme Palette (edit these 8 lines) ===== */
+:root{
+  --bg: #0f1115;            /* page background */
+  --bg-alt: #171a21;        /* alt sections/footer */
+  --panel: #111827;         /* cards/spotlights */
+  --text: #e8eaed;          /* body text */
+  --muted: #a1a1aa;         /* secondary text */
+  --accent: #ffcc00;        /* brand accent (buttons/lines) */
+  --accent-contrast: #111;  /* text on accent */
+  --link: #ffd54a;          /* links */
+}
+
+/* ===== Global ===== */
+body, .wrapper { background: var(--bg); color: var(--text); }
+.wrapper.style1 { background: var(--bg); }
+.wrapper.style1-alt, footer.wrapper { background: var(--bg-alt); }
+.wrapper.style2 { background: var(--panel); }
+.wrapper.style3 { background: var(--bg-alt); }
+a { color: var(--link); }
+a:hover { filter: brightness(1.1); }
+
+/* Headings & section markers */
+h1, h2, h3 { color: var(--text); }
+h1.major:after { background-color: var(--accent) !important; }
+
+/* Sidebar */
+#sidebar { background: var(--panel); }
+#sidebar nav a:hover, #sidebar nav a.active { color: var(--accent); }
+
+/* Buttons */
+.button { background: transparent; border-color: var(--accent); color: var(--accent) !important; }
+.button:hover { background: var(--accent); color: var(--accent-contrast) !important; }
+.button.primary { background: var(--accent); color: var(--accent-contrast) !important; border-color: var(--accent); }
+
+/* Icons (feature circles) */
+.icon.solid.major, .icon.major { color: var(--accent); border-color: var(--accent); }
+
+/* Images overlay in spotlights (keep readable) */
+.spotlights > section .image:before { background-color: rgba(0,0,0,0.35); }
+
+/* Hero overlay tint (adjust if too dark/light) */
+#intro:before { background-color: rgba(0,0,0,0.35); }
+
+/* Hero background image */
+#intro {
+  position: relative;
+  background: url("../../images/main1.jpg") center center / cover no-repeat;
+}
+
+/* Keep text readable over the photo */
+#intro .inner { position: relative; z-index: 2; }
+/* Hyperspace already uses :before for an overlay; darken it a bit */
+#intro:before { background-color: rgba(0,0,0,0.45); }
+
+/* Optional: tweak crop on mobile */
+@media (max-width: 736px) {
+  #intro { background-position: 50% 30%; }
+}
