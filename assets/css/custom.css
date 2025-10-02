@@ -44,7 +44,7 @@ h1.major:after { background-color: var(--accent) !important; }
 /* Hero background image */
 #intro {
   position: relative;
-  background: url("../../images/main1.jpg") center center / cover no-repeat;
+  background: url("../../images/MTU_camp2.jpg") center center / cover no-repeat;
 }
 
 /* Keep text readable over the photo */
