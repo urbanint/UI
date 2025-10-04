@@ -80,3 +80,56 @@ h1.major:after { background-color: var(--accent) !important; }
 
 /* Optional: since we now have a panel, lighten the global hero overlay a bit */
 #intro:before{ background-color: rgba(0,0,0,0.30); }
+
+/* TEAM GRID  */
+#team .team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* TEAM CARD */
+#team .team-card {
+  text-align: center;
+}
+
+/* UNIFORM HEADSHOTS */
+#team .team-card .avatar {
+  width: 180px;          /* change to 200px if you want bigger */
+  height: 180px;
+  object-fit: cover;     /* crop to square without stretching */
+  border-radius: 50%;    /* circular headshots */
+  display: block;
+  margin: 0 auto 0.75rem;
+}
+
+/* TYPOGRAPHY TWEAKS */
+#team .team-card h3 {
+  margin: 0.25rem 0 0.25rem;
+}
+
+#team .team-card .meta {
+  font-size: 0.95rem;
+  opacity: 0.9;
+  margin: 0 0 0.4rem;
+}
+
+#team .team-card .interests {
+  font-size: 0.9rem;
+  margin: 0 0 0.6rem;
+}
+
+#team .team-card .field-label {
+  font-weight: 600;
+}
+
+/* LINKS (icons) */
+#team .team-card .links a {
+  display: inline-block;
+  margin: 0 0.25rem;
+  text-decoration: none;
+}
+
