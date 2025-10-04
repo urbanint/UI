@@ -3,7 +3,7 @@
   --bg: #0f1115;            /* page background */
   --bg-alt: #171a21;        /* alt sections/footer */
   --panel: #111827;         /* cards/spotlights */
-  --text: #e8eaed;          /* body text */
+  --text: #b3b6bd;          /* body text */
   --muted: #a1a1aa;         /* secondary text */
   --accent: #ffcc00;        /* brand accent (buttons/lines) */
   --accent-contrast: #111;  /* text on accent */
@@ -149,6 +149,7 @@ h1.major:after { background-color: var(--accent) !important; }
   width: 100%;          /* responsive within sidebar */
   height: auto;
   margin: 0 auto;
+  filter: brightness(1.1) contrast(1.2);
 }
 
 /* Optional: reduce size on very small screens */
@@ -157,4 +158,26 @@ h1.major:after { background-color: var(--accent) !important; }
     max-width: 130px;
     width: 60%;
   }
+}
+/* Sidebar uses theme colors */
+#sidebar {
+  background-color: var(--text) !important;  /* pick --bg, --bg-alt, or define your own */
+  color: var(--bg-alt) !important;
+}
+
+/* Sidebar links & underline track */
+#sidebar nav a {
+  color: rgba(0, 0, 0, 0.7);                 /* or var(--text) with lower opacity */
+}
+#sidebar nav a:hover { color: #000000; }
+#sidebar nav a:before {                         /* the subtle track under each link */
+  background: rgba(0, 0, 0, 0.12) !important;
+}
+#sidebar nav a:after {                          /* the animated accent underline */
+  background-image: linear-gradient(to right, var(--accent), var(--link)) !important;
+}
+
+/* Optional: tweak the logo if it's in the sidebar */
+#sidebar .brand-logo {
+  filter: brightness(1.08) contrast(1.06);
 }
