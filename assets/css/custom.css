@@ -133,3 +133,28 @@ h1.major:after { background-color: var(--accent) !important; }
   text-decoration: none;
 }
 
+/* Sidebar logo */
+#sidebar .brand {
+  text-align: center;
+  margin: 0 0 1.25rem 0;  /* space below logo */
+}
+
+#sidebar .brand-link {
+  display: inline-block;
+}
+
+#sidebar .brand-logo {
+  display: block;
+  max-width: 760px;    /* adjust to taste */
+  width: 100%;          /* responsive within sidebar */
+  height: auto;
+  margin: 0 auto;
+}
+
+/* Optional: reduce size on very small screens */
+@media screen and (max-width: 480px) {
+  #sidebar .brand-logo {
+    max-width: 130px;
+    width: 60%;
+  }
+}
